@@ -1,25 +1,56 @@
-import React from 'react'
+import React from "react";
 
 const Manager = () => {
   return (
     <>
-    <div>
-      <div className="absolute top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-    </div>
-
-    <div className="container mx-auto bg-slate-700">
-        <div className="text-white flex flex-col p-4">
-            <input type="text" name="" id="" />
-            <div className="flex">
-                <input type="text"  />
-                <input type="text"  />
+      <div className="mx-auto bg-customBlue max-w-4xl my-5 p-6 rounded-lg">
+        <h1 className="text-2xl font-bold text-center text-gray-100">
+          Welcome to Your Vault
+        </h1>
+        <p className="text-lg text-gray-200 mb-4 text-center w-full ">
+          Securely store and manage your passwords with ease.
+        </p>
+        <div className="text-white flex flex-col p-4 gap-8 items-center">
+          <input
+            className="rounded-full border border-blue-900 text-black px-3 py-1 w-full"
+            placeholder="Enter the URL of your website"
+            type="text"
+            name=""
+            id=""
+          />
+          <div className="flex w-full justify-between gap-8">
+            <input
+              className="rounded-full border border-blue-900 text-black px-3 py-1 w-full"
+              placeholder="Enter your Username"
+              type="text"
+              name=""
+              id=""
+            />
+            <div className="relative w-full">
+            <input
+              className="rounded-full border border-blue-900 text-black px-3 py-1 w-full"
+              placeholder=" Enter your Password"
+              type="text"
+              name=""
+              id=""
+            />
+            <span className="absolute right-0 text-black">show</span>
             </div>
+            
+          </div>
+          <button className="flex justify-center items-center bg-amber-400 rounded-full font-semibold w-fit p-3 hover:bg-yellow-500 border-2 border-amber-500 gap-1 ">
+            <lord-icon
+              src="https://cdn.lordicon.com/tsrgicte.json"
+              trigger="hover"
+              stroke="bold"
+              colors="primary:#306bac,secondary:#104891"              
+            ></lord-icon>
+            Save Password
+          </button>
         </div>
-    </div>
-    
+      </div>
     </>
-    
-  )
-}
+  );
+};
 
-export default Manager
+export default Manager;

@@ -12,7 +12,7 @@ const Footer = () => {
           <span>Built with ❤️ using</span>
           <span>React</span>
           <img
-            src="/icons/science.png"
+            src="/icons/react.png"
             alt="React logo"
             className="h-6 w-6"
             title="React"

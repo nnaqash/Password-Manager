@@ -11,7 +11,6 @@ const Manager = () => {
 
   useEffect(() => {
     let passwords = localStorage.getItem("passwords");
-    let passwordArray;
     if (passwords) {
       setpasswordArray(JSON.parse(passwords));
     }
@@ -30,7 +29,7 @@ const Manager = () => {
   const savePassword = () => {
     if(form.site.length>5 && form.username.length>5 && form.password.length>5){
       setpasswordArray([...passwordArray, {...form, id:uuidv4()}]);
-      localStorage.setItem("password", JSON.stringify([...passwordArray, {...form, id:uuidv4()}]));
+      localStorage.setItem("passwords", JSON.stringify([...passwordArray, {...form, id:uuidv4()}]));
       console.log(passwordArray, form);
       setform({ site: "", username: "", password: "" })
       toast("password saved successfully", {
